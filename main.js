@@ -2,7 +2,7 @@ $('#cutoff').hide();
 $('#cutoff').click(cutoff);
 var pic = new Image();  // Создание нового объекта изображения
 pic.src = 'https://hsto.org/storage/habrastock/i/nocopypast.png';
-pic.src='yuliana-orig.png';
+pic.src='sea01.jpg';
 
 var canvas=document.getElementById("canvas");
 canvas.onclick=addPoint;
@@ -12,8 +12,8 @@ var points=[], counter=0;
 function cutoff() {
     console.log('you try to cut Yuliana');
     ctx.drawImage(pic, 0, 0);
-    for (var i=0;i<187;i++)
-    for (var j=0;j<300;j++){
+    for (var i=0;i<409;i++)
+    for (var j=0;j<441;j++){
         if (!inPolyline(i,j,points)){
             ctx.fillRect(i, j, 1, 1);
         }
